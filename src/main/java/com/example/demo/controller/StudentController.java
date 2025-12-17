@@ -19,5 +19,8 @@ public class StudentController {
     public StudentEntity addStudents(@RequestBody StudentEntity student){
         return ser.addStudents(student);
     }
-    
+    @GetMapping("/getStudents")
+    public List<StudentEntity> getStudents(){
+        return ser.getStudents();
+    }
 }
