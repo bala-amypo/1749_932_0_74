@@ -17,6 +17,7 @@ public class StudentEntity {
     @NotBlank(message="Please fill all the fields")
     @Email(message="Invalid Format")
     private String email;
+    @Min(value=7.5,message="Low CGPA")
     private float cgpa;
 
     public StudentEntity(Long id, @NotBlank(message="Please fill the fields")
@@ -56,4 +57,4 @@ public class StudentEntity {
 
 //@NotBlank(message="Please fill all the fields")
 //@Email(message="Invalid Format")
-//@Size(Min=18 , Max=40 , Message="Out of range")
+//@Size(min=18 , max=40 , message="Out of range")
