@@ -46,3 +46,8 @@ public class StudentEntity {
         return this.cgpa;
     }
 }
+
+
+
+//@NotBlank(message="Please fill all the fields")
+//@Email(message="Invalid Format")
