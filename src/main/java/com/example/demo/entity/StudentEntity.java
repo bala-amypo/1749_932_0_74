@@ -12,11 +12,16 @@ public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message="Please fill all the fields")
     private String name;
+    @NotBlank(message="Please fill all the fields")
+    @Email(message="Invalid Format")
     private String email;
     private float cgpa;
 
-    public StudentEntity(Long id,String name,String email,float cgpa){
+    public StudentEntity(Long id, @NotBlank(message="Please fill the fields")
+ String name, @NotBlank(message="Please fill the fields")
+    @Email(message="Invalid Format") String email,float cgpa){
         this.id=id;
         this.name=name;
         this.email=email;
