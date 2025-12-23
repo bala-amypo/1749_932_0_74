@@ -21,8 +21,8 @@ public class StudentEntity {
     @NotBlank(message="Please fill all the fields")
     @Email(message="Invalid Format")
     private String email;
-    @Min(value=7.5,message="Low CGPA")
-    private float cgpa;
+    @Min(value=7,message="Low CGPA")
+    private double cgpa;
 
     public StudentEntity(Long id, @NotBlank(message="Please fill the fields")
  String name, @NotBlank(message="Please fill the fields")
@@ -52,7 +52,7 @@ public class StudentEntity {
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
-    public float getCgpa(){
+    public double getCgpa(){
         return this.cgpa;
     }
 }
