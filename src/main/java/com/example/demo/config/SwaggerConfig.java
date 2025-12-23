@@ -1,4 +1,5 @@
 package com.example.demo.config;
+import org.springframework.context.annotation.Bean;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.servers.Server;
@@ -8,6 +9,7 @@ import java.util.List;
 @Configuration
 public class SwaggerConfig {
 
+    @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 // You need to change the port as per your server
